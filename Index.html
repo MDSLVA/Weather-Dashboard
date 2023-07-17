@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+ 
+<link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+  
+  <main>
+    <section id="search-section">
+      <form id="search-form">
+        <label for="city-input">Enter a city:</label>
+        <input type="text" id="city-input" required>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+    
+    <section id="current-weather-section">
+      <h2>Current Weather</h2>
+      <div id="current-weather-info">
+        <!-- Display current weather information here dynamically -->
+      </div>
+    </section>
+    
+    <section id="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div id="forecast-info">
+        <!-- Display forecast information here dynamically -->
+      </div>
+    </section>
+    
+    <section id="search-history-section">
+      <h2>Search History</h2>
+      <ul id="search-history-list">
+        <!-- Display search history items dynamically -->
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Weather Dashboard &copy; 2023</p>
+  </footer>
+  
+  <script src="./Assets/script.js"></script>
+</body>
+</html>
