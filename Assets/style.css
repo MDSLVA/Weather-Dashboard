@@ -55,9 +55,14 @@ body {
     margin: 10px;
   }
   
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+
+  #search-history-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the left */
+  }
+  
+  #search-history-list button {
+    margin-bottom: 5px; /* Add a small margin between buttons */
   }

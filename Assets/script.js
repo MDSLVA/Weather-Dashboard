@@ -112,22 +112,20 @@ function appendChildren(parent, ...children) {
   children.forEach(child => parent.appendChild(child));
 }
 
-// Function to add a city to the search history
 function addToSearchHistory(cityName) {
   if (!searchHistory.includes(cityName)) {
     searchHistory.push(cityName);
 
-    const listItem = createElement('li', cityName);
+    const button = createElement('button', cityName); 
 
-    listItem.addEventListener('click', () => {
+    button.addEventListener('click', () => {
       searchInput.value = cityName;
       searchForm.dispatchEvent(new Event('submit'));
     });
 
-    searchHistoryList.appendChild(listItem);
+    searchHistoryList.appendChild(button); 
   }
 }
-
 // Function to handle form submission
 function handleFormSubmit(event) {
   event.preventDefault();
