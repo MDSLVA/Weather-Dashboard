@@ -14,13 +14,9 @@ function getWeatherData(cityName) {
   return fetch(apiUrl)
     .then(response => {
       if (!response.ok) {
-        throw new Error('Unable to fetch weather data.');
+        return Promise.reject(new Error('Unable to fetch weather data.'));
       }
       return response.json();
-    })
-    .catch(error => {
-      console.error(error);
-      throw error;
     });
 }
 
@@ -31,13 +27,9 @@ function getForecastData(cityName) {
   return fetch(apiUrl)
     .then(response => {
       if (!response.ok) {
-        throw new Error('Unable to fetch forecast data.');
+        return Promise.reject(new Error('Unable to fetch forecast data.'));
       }
       return response.json();
-    })
-    .catch(error => {
-      console.error(error);
-      throw error;
     });
 }
 
